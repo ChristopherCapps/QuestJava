@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <organization>
+    <name>Peak Engineering</name>
+  </organization>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.5.0</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>com.quest.engine</groupId>
+  <artifactId>quest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>QUEST: Parent</name>
+  <description>QUEST: Modern scavenger hunting</description>
+
+  <properties>
+    <java.version>16</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <commons-io.version>2.6</commons-io.version>
+    <commons-lang.version>3.8.1</commons-lang.version>
+    <commons-net.version>3.6</commons-net.version>
+    <contract-lib.version>1.1.15</contract-lib.version>
+    <google-lib-bom.version>16.1.0</google-lib-bom.version>
+    <libphonenumber.version>8.12.13</libphonenumber.version>
+    <spring.boot.version>2.5.0</spring.boot.version>
+    <spring.cloud.version>Hoxton.SR9</spring.cloud.version>
+    <spring.gcp.version>1.2.6.RELEASE</spring.gcp.version>
+    <spring-cloud-function-adapter-gcp.version>3.1.1</spring-cloud-function-adapter-gcp.version>
+    <spring-security-test.version>5.3.4.RELEASE</spring-security-test.version>
+    <tomcat.version>9.0.41</tomcat.version>
+    <twilio.version>8.3.0</twilio.version>
+  </properties>
+
+  <modules>
+    <module>cloudfx</module>
+    <module>core</module>
+    <module>cloudws</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring.boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-function-adapter-gcp</artifactId>
+        <version>${spring.cloud.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <version>${spring.boot.version}</version>
+        <scope>test</scope>
+      </dependency>  
+    </dependencies>
+  </dependencyManagement>
+
+</project>
